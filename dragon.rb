@@ -98,7 +98,8 @@ class Dragon
     end
 
     if poopy?
-      if @asleep = false
+      if @asleep
+        @asleep = false
         puts "He wakes up suddenly!!"
       end
       puts "#{@name} does the potty dance..."
@@ -117,6 +118,15 @@ pet.sleep
 pet.rock
 pet.sleep
 pet.sleep
+pet.walk
+pet.feed
 pet.sleep
 pet.sleep
+pet.sleep
+pet.play
+pet.sleep
+pet.sleep
+
+
+
 
