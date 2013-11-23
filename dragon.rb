@@ -10,7 +10,7 @@ class Dragon
     @stomach = 10 # Full
     @colon = 0 # No need to go
 
-    puts "#{name} is born."
+    puts "#{name} is born!"
   end
 
   def feed
@@ -78,9 +78,9 @@ class Dragon
     else
       if @asleep
         @asleep = false
-        puts "#{@name} wakes up suddenly!!"
+        puts "#{@name} wakes up!"
       end
-      puts "#{@name} is starving! In desperation, he ate you!"
+      puts "#{@name} is starving! In desperation, he ate you!!"
       exit
     end
 
@@ -92,7 +92,7 @@ class Dragon
     if hungry?
       if @asleep
         @asleep = false
-        puts "#{@name} wakes up suddenly!!"
+        puts "#{@name} wakes up suddenly!"
       end
       puts "#{@name}'s stomach grumbles..."
     end
@@ -100,7 +100,7 @@ class Dragon
     if poopy?
       if @asleep
         @asleep = false
-        puts "He wakes up suddenly!!"
+        puts "He wakes up suddenly!"
       end
       puts "#{@name} does the potty dance..."
     end
