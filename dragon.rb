@@ -8,7 +8,7 @@ class Dragon
     @name = name
     @asleep = false
     @stomach = 10 # Full
-    @bladder = 0 # No need to go
+    @colon = 0 # No need to go
 
     puts "#{name} is born."
   end
@@ -21,7 +21,7 @@ class Dragon
 
   def walk
     puts "You walk #{name}."
-    @bladder = 0
+    @colon = 0
     time
   end
 
@@ -61,5 +61,48 @@ class Dragon
     end
   end
 
+  private
+
+  def hungry?
+    @stomach <= 2
+  end
+
+  def poopy?
+    @colon >= 8
+  end
+
+  def time
+    if @stomach > 0
+      @stomach = @stomach - 1
+      @colon = @colon + 1
+    else
+      if @asleep
+        @asleep = false
+        puts "#{name} wakes up suddenly!!"
+      end
+      puts "#{name} is starving! In desperation, he ate you!"
+      exit
+    end
+
+    if @colon >= 10
+      @colon = 0
+      puts "Whoops! #{name} had an accident."
+    end
+
+    if hungry?
+      if @asleep
+        @asleep = false
+        puts "#{name} wakes up suddenly!!"
+      end
+      puts "#{name}'s stomach grumbles..."
+    end
+
+    if poopy?
+      if @asleep = false
+        puts "He wakes up suddenly!!"
+      end
+      puts "#{name} does the potty dance..."
+    end
+  end
   
 end
