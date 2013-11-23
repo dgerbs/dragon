@@ -14,19 +14,19 @@ class Dragon
   end
 
   def feed
-    puts "You feed #{name}."
+    puts "You feed #{@name}."
     @stomach = 10
     time
   end
 
   def walk
-    puts "You walk #{name}."
+    puts "You walk #{@name}."
     @colon = 0
     time
   end
 
   def sleep
-    puts "You puts #{name} to bed."
+    puts "You put #{@name} to bed."
     @asleep = true
     
     3.times do
@@ -34,24 +34,24 @@ class Dragon
         time
       end
       if @asleep
-        puts "#{name} snores, filling the room with smoke."
+        puts "#{@name} snores, filling the room with smoke."
       end
     end
     
     if @asleep
       @asleep = false
-      puts "#{name} wakes up slowly."
+      puts "#{@name} wakes up slowly."
     end
   end
 
   def play
-    puts "You toss #{name} up into the air."
-    puts "#{name} giggles, which singes your eyebrows."
+    puts "You toss #{@name} up into the air."
+    puts "#{@name} giggles, which singes your eyebrows."
     time
   end
 
   def rock
-    puts "You rock #{name} gently."
+    puts "You rock #{@name} gently."
     @asleep = true
     puts "He briefly dozes off..."
     time
@@ -78,31 +78,45 @@ class Dragon
     else
       if @asleep
         @asleep = false
-        puts "#{name} wakes up suddenly!!"
+        puts "#{@name} wakes up suddenly!!"
       end
-      puts "#{name} is starving! In desperation, he ate you!"
+      puts "#{@name} is starving! In desperation, he ate you!"
       exit
     end
 
     if @colon >= 10
       @colon = 0
-      puts "Whoops! #{name} had an accident."
+      puts "Whoops! #{@name} had an accident."
     end
 
     if hungry?
       if @asleep
         @asleep = false
-        puts "#{name} wakes up suddenly!!"
+        puts "#{@name} wakes up suddenly!!"
       end
-      puts "#{name}'s stomach grumbles..."
+      puts "#{@name}'s stomach grumbles..."
     end
 
     if poopy?
       if @asleep = false
         puts "He wakes up suddenly!!"
       end
-      puts "#{name} does the potty dance..."
+      puts "#{@name} does the potty dance..."
     end
   end
-  
+
 end
+
+# Give dragon actions
+
+pet = Dragon.new 'Norbert'
+pet.feed
+pet.play
+pet.walk
+pet.sleep
+pet.rock
+pet.sleep
+pet.sleep
+pet.sleep
+pet.sleep
+
