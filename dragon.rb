@@ -50,5 +50,16 @@ class Dragon
     time
   end
 
+  def rock
+    puts "You rock #{name} gently."
+    @asleep = true
+    puts "He briefly dozes off..."
+    time
+    if @asleep
+      @asleep = false
+      puts "...but wakes when you stop."
+    end
+  end
+
   
 end
