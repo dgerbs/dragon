@@ -44,5 +44,11 @@ class Dragon
     end
   end
 
-      
+  def play
+    puts "You toss #{name} up into the air."
+    puts "#{name} giggles, which singes your eyebrows."
+    time
+  end
+
+  
 end
