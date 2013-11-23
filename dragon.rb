@@ -18,4 +18,9 @@ class Dragon
     @stomach = 10
     time
   end
+
+  def walk
+    puts "You walk #{name}."
+    @bladder = 0
+    time
 end
