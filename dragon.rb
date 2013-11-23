@@ -108,9 +108,9 @@ class Dragon
 
 end
 
-# Give dragon actions
+# It's alive!
 
-pet = Dragon.new 'Norbert'
+pet = Dragon.new 'Puff'
 pet.feed
 pet.play
 pet.walk
